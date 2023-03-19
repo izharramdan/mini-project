@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome start -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font awesome end -->
+
+    <title>streamGO</title>
+
+    <!-- bootstrap start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- bootstrap end -->
+
+    <!-- google fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Kumbh+Sans:wght@700&family=Lato:ital@1&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@500&family=Kumbh+Sans:wght@700&family=Lato:ital@1&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee+Spice&family=Inter:wght@500&family=Kumbh+Sans:wght@700&family=Lato:ital@1&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee+Spice&family=Inter:wght@500&family=Kumbh+Sans:wght@700&family=Lato:ital@1&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Open+Sans:wght@700&family=Poppins:wght@700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- google fonts end -->
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    <!-- navbar start -->
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GO<span>></span></a>
+        <button class="navbar-toggler m-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mylist.html">my list</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <div class="right-content">
+            <div class="nav-search">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="search" aria-label="Search"></form>
+            </div>
+            <div class="btn-signin">
+              <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#signInModal">sign in</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-content">
+      <nav style="--bs-breadcrumb-divider: '>';">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">home</a></li>
+          <li class="breadcrumb-item"><a href="categories.html">categories</a></li>
+        </ol>
+      </nav>
+    </div>
+    
+    <!-- breadcrumb end -->
+
+    <!-- modal start -->
+
+    <!-- modal sign in start -->
+
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="signin">
+            <div class="pb_41">Sign In</div>
+            <div>
+                <input class="form-control input_email" type="email" id="exampleFormControlInput1" placeholder="Enter phone number or email address">
+            </div>
+            <div class="form-check form-switch d-flex justify-content-center align-items-center mt_24">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="margin: 0;">
+                <label class="form-check-label or_text" for="flexSwitchCheckDefault">Keep me signed in</label>
+            </div>
+            <div class="d-flex flex-column">
+                <button type="button" class="btn btn-warning mt_24 btn_signin">Sign In</button>
+                <button type="button" class="btn btn-link mt_24 btn_signup">Sign Up</button>
+            </div>
+            <div class="or_text mt_24" style="text-align: center;">or</div>
+            <div class="d-flex flex-column mt_24" style="gap: 12px;">
+                <button type="button" class="btn btn-light btn-sosmed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                </svg>
+                    Continue with Google</button>
+                <button type="button" class="btn btn-light btn-sosmed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1976D2" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg> Continue with Facebook</button>
+                <button type="button" class="btn btn-light btn-sosmed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                    <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                    <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                </svg> Continue with Apple</button>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal sign in end -->
+
+        <!-- modal movie start -->
+
+        <div class="modal fade" id="movie1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/jurassic world.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Jurassic World: Dominion</h4>
+                        <p class="card-text">After surviving the destruction of Isla Nubla, Owen Grady and Claire Dearing took in young Maisie Lockwood.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/air-final-poster.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Air</h4>
+                        <p class="card-text">Follows the history of shoe salesman Sonny Vaccaro, and how he led Nike in its pursuit of the greatest athlete in the history of basketball: Michael Jordan.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie3Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/fast-x-poster-1.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Fast X</h4>
+                        <p class="card-text">The end of the road begins.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie4Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/mission-impossible-7-poster.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Mission: Impossible - Dead Reckoning Part One</h4>
+                        <p class="card-text">Seventh entry in the long-running Mission: Impossible series.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie5Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/the-marvels-poster.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">The Marvels</h4>
+                        <p class="card-text">Sequel to the 2019 title 'Captain Marvel'.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="movie6Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/ant man.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Ant-Man</h4>
+                        <p class="card-text">Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, pull off a plan that will save the world.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie7Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/ghosted-poster.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Ghosted</h4>
+                        <p class="card-text">Cole falls head over heels for enigmatic Sadie, but then makes the shocking discovery that she's a secret agent. Before they can decide on a second date, Cole and Sadie are swept away on an international adventure to save the world.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie8Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/little-mermaid-poster.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">The Little Mermaid</h4>
+                        <p class="card-text">A young mermaid makes a deal with a sea witch to trade her beautiful voice for human legs so she can discover the world above water and impress a prince.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie9Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/moon knight.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Moon Knight</h4>
+                        <p class="card-text">Steven Grant discovers he's been granted the powers of an Egyptian moon god. But he soon finds out that these newfound powers can be both a blessing and a curse to his troubled life.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="modal fade" id="movie10Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-content">
+              <div class="modal-card">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="images/vertical poster/creed-iii-poster.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h4 class="card-title-modal">Creed III</h4>
+                        <p class="card-text">Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.</p>
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- modal movie end -->
+
+    <!-- modal end -->
+
+        <!-- card start -->
+    
+        <section class="trending">
+          <h1>trending now</h1>
+                <div class="cards-wrapper">
+                  <div class="card text-bg-dark">
+                    <div class="card-img"></div>
+                    <img src="images/vertical poster/jurassic world.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay card-col">
+                      <div class="card-caption">
+                        <h5 class="card-title">Jurrasic World: Dominion</h5>
+                      </div>
+                      <div class="button-card">
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                        <div class="btn-info">
+                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie1Modal"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card text-bg-dark">
+                    <img src="images/vertical poster/air-final-poster.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay card-col">
+                      <div class="card-caption">
+                        <h5 class="card-title">Air: Courting A Legend</h5>
+                      </div>
+                      <div class="button-card">
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                        <div class="btn-info">
+                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie2Modal"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card text-bg-dark">
+                    <img src="images/vertical poster/fast-x-poster-1.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay card-col">
+                      <div class="card-caption">
+                        <h5 class="card-title">Fast X</h5>
+                      </div>
+                      <div class="button-card">
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                        <div class="btn-info">
+                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie3Modal"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card text-bg-dark">
+                    <img src="images/vertical poster/mission-impossible-7-poster.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay card-col">
+                      <div class="card-caption">
+                        <h5 class="card-title">Mission: Impossible - Dead Reckoning Part One</h5>
+                      </div>
+                      <div class="button-card">
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                        <div class="btn-info">
+                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie4Modal"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card text-bg-dark">
+                    <img src="images/vertical poster/the-marvels-poster.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay card-col">
+                      <div class="card-caption">
+                        <h5 class="card-title">The Marvels</h5>
+                      </div>
+                      <div class="button-card">
+                        <div class="btn-play">
+                          <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                        </div>
+                        <div class="btn-info">
+                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie5Modal"><i class="fa-solid fa-circle-info"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>           
+                </div>
+      </section>
+
+      <section class="trending">
+        <h1>most watched</h1>
+              <div class="cards-wrapper">
+                <div class="card text-bg-dark">
+                  <div class="card-img"></div>
+                  <img src="images/vertical poster/ant man.jpg" class="card-img" alt="...">
+                  <div class="card-img-overlay card-col">
+                    <div class="card-caption">
+                      <h5 class="card-title">Ant Man</h5>
+                    </div>
+                    <div class="button-card">
+                      <div class="btn-play">
+                        <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                      </div>
+                      <div class="btn-info">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie6Modal"><i class="fa-solid fa-circle-info"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card text-bg-dark">
+                  <img src="images/vertical poster/ghosted-poster.jpg" class="card-img" alt="...">
+                  <div class="card-img-overlay card-col">
+                    <div class="card-caption">
+                      <h5 class="card-title">Ghosted</h5>
+                    </div>
+                    <div class="button-card">
+                      <div class="btn-play">
+                        <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                      </div>
+                      <div class="btn-info">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie7Modal"><i class="fa-solid fa-circle-info"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card text-bg-dark">
+                  <img src="images/vertical poster/little-mermaid-poster.jpg" class="card-img" alt="...">
+                  <div class="card-img-overlay card-col">
+                    <div class="card-caption">
+                      <h5 class="card-title">The Little Mermaid</h5>
+                    </div>
+                    <div class="button-card">
+                      <div class="btn-play">
+                        <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                      </div>
+                      <div class="btn-info">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie8Modal"><i class="fa-solid fa-circle-info"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card text-bg-dark">
+                  <img src="images/vertical poster/moon knight.jpg" class="card-img" alt="...">
+                  <div class="card-img-overlay card-col">
+                    <div class="card-caption">
+                      <h5 class="card-title">Moon Knight</h5>
+                    </div>
+                    <div class="button-card">
+                      <div class="btn-play">
+                        <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                      </div>
+                      <div class="btn-info">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie9Modal"><i class="fa-solid fa-circle-info"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card text-bg-dark">
+                  <img src="images/vertical poster/creed-iii-poster.jpg" class="card-img" alt="...">
+                  <div class="card-img-overlay card-col">
+                    <div class="card-caption">
+                      <h5 class="card-title">Creed III</h5>
+                    </div>
+                    <div class="button-card">
+                      <div class="btn-play">
+                        <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                      </div>
+                      <div class="btn-info">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movie10Modal"><i class="fa-solid fa-circle-info"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>           
+              </div>
+    </section>
+  
+      <!-- card end -->
+
+    <!-- footer start -->
+    
+    <section class="footer">
+        <div class="faq col">
+          <div class="faq-logo">
+            <h1>GO<span>></span></h1>
+            <p>copyright &copy 2023</p>
+          </div>
+        </div>
+    <div class="social col mt-5 mb-5">
+      <a href="https://www.instagram.com/izharamdan/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+      <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </section>
+
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+
+</body>
+</html>
