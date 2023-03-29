@@ -282,11 +282,13 @@
             <img src="images/horizontal poster/money heist1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <div class="btn-play">
-                <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                <a href="player.html" id="buttonAlert1"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
               </div>
               <div class="carousel-ket">
                 <h3>Money Heist</h3>
-                <p>An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.</p>
+                <button class="btn btn-warning rounded-5" onclick="toggleParagraph()" id="myButton">more</button>
+                <p id="addElementMoneyHeist"></p>
+                <!-- <p>An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.</p> -->
               </div> 
             </div>
           </div>
@@ -294,7 +296,7 @@
             <img src="images/horizontal poster/keanu_reeves_as_john_wick_donnie_yen_as_caine_bill_skarsgard_marquis_laurence_fishburne_bowery_king_hiroyuki_sanada_shimazu_hd_john_wick_chapter_4.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <div class="btn-play">
-                <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+                <a href="player.html" id="buttonAlert2"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
               </div>
               <div class="carousel-ket">
                 <h3>John Wick: Chapter 4</h3>
@@ -305,8 +307,8 @@
           <div class="carousel-item">
             <img src="images/horizontal poster/helen_mirren_as_hespera_zachary_levi_as_shazam_lucy_liu_as_kalypso_grace_caroline_currey_as_mary_bromfield_meagan_good_as_super_hero_darla_hd_shazam_fury_of_the_gods.jpg"class="d-block w-100" alt="...">
             <div class="carousel-caption">
-              <div class="btn-play">
-                <a href="player.html"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
+              <div class="btn-play" >
+                <a href="player.html" id="buttonAlert3"><button type="button" class="btn btn-danger"><i class="fa-sharp fa-solid fa-play"></i></button></a>
               </div>
               <div class="carousel-ket">
                 <h3>Shazam! Fury of the Gods</h3>
@@ -470,7 +472,8 @@
       feather.replace();
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script/main.js"></script> 
 
 </body>
 </html>
